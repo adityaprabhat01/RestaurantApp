@@ -1,13 +1,16 @@
 import React from 'react'
+import Homepage from './Homepage/Homepage'
 import Restaurant from './Restaurant/Restaurant'
+import SearchBar from './Search/SearchBar'
 
 
 const App = () => {
   return(
-    <div>
-      App
+    <React.Fragment>
+      <SearchBar />
+      <Homepage />
       <Restaurant />
-    </div>
+    </React.Fragment>
   )
 }
 

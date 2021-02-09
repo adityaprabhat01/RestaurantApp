@@ -18,11 +18,11 @@ const SearchBar = ({ locationName }) => {
           setLocation(x)
         })
       }
-      getLocation()
+      //getLocation()
     }, [] // dependency array showing warning
   )
 
-  console.log(location)
+  //console.log(location)
 
   return (
     <div>

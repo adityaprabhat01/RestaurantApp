@@ -1,15 +1,13 @@
 import React from 'react'
-import SearchBar from '../Search/SearchBar'
-import Review from './Review'
-import Overview from './Overview'
+import Review from './Review/Review'
+import Overview from './Overview/Overview'
 
 const Restaurant = () => {
   return (
-    <React.Fragment>
+    <div>
       <Overview res_id='18812310' />
-      <SearchBar locationName='Manipal' />
       <Review res_id='18812310' />
-    </React.Fragment>
+    </div>
     
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-import { baseUrl, options } from '../api/index'
+import { baseUrl, options } from '../../api/index'
 
 const Overview = ({ res_id }) => {
   const [overview, setOverview] = useState('')
@@ -23,10 +23,10 @@ const Overview = ({ res_id }) => {
           setOverview(x)
         })
     }
-      fetchOverview()
+      //fetchOverview()
     }, []
   )
-  console.log(overview)
+  //console.log(overview)
   return (
     <div>
       Overview
