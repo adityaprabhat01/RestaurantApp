@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 
 import { baseUrl, options } from './index'
 
-function useFetch(res_id){
+function useFetch(param, id){
   const [data, setData] = useState({})
   const [status, setStatus] = useState(false)
-  const url = baseUrl + '/reviews?res_id=' + res_id
+  const url = baseUrl + param + id
   useEffect(() => {
     async function getReview() {
       const response = await fetch(url, options)

@@ -1,35 +1,26 @@
 import React, { useState, useEffect } from 'react'
 
 import { baseUrl, options } from '../../api/index'
+import useFetch from '../../api/useFetch'
+import isEmpty from '../../utils'
 
 const Overview = ({ res_id }) => {
-  const [overview, setOverview] = useState('')
-  useEffect(() => {
-    function fetchOverview() {
-      const url = baseUrl + '/restaurant?res_id=' + res_id
-      fetch(url, options)
-        .then(res => res.json())
-        .then(data => {
-          const { cuisines, highlights, name, phone_numbers, timings, user_rating, average_cost_for_two } = data
-          let x = {
-            cuisines,
-            highlights, 
-            name, 
-            phone_numbers, 
-            timings, 
-            user_rating: user_rating.aggregate_rating, 
-            average_cost_for_two
-          }
-          setOverview(x)
-        })
-    }
-      //fetchOverview()
-    }, []
-  )
-  //console.log(overview)
+  const data = useFetch('/restaurant?res_id=', res_id)
+  const { 
+    average_cost_for_two,
+    cuisines, 
+    establishment, 
+    has_online_delivery, 
+    highlights, is_delivering_now, 
+    location, name, 
+    phone_numbers, 
+    timings, 
+    user_rating 
+  } = data
+  console.log(data)
   return (
     <div>
-      Overview
+      { isEmpty(data) ? 'Loading...' : name }
     </div>
   )
 }
