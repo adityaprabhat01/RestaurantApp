@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-import { baseUrl, options } from '../../api/index'
 import useFetch from '../../api/useFetch'
 import isEmpty from '../../utils'
 

@@ -7,18 +7,5 @@ export const options = {
   }
 }
 
-// const url = "https://developers.zomato.com/api/v2.1/categories";
-// fetch(url, options)
-//   .then( res => res.json() )
-//   .then( data => console.log(data) );
-
-// export function fetchLocations(locationName) {
-//   const url = baseUrl + '/locations?query=' + locationName
-//   fetch(url, options)
-//     .then(res => res.json())
-//     .then( 
-//       data => {
-//       console.log(data)
-//       return data
-//     })
-// }
+export const geocodeApi = 'pk.eyJ1IjoiYWRpdHlhcHJhYmhhdCIsImEiOiJjazkza3hwNW0wMXczM21ydXN2eGptdnY3In0.kIzYy1jSdWIGtUGN8q6Anw'
+export const geocodeBaseUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'
