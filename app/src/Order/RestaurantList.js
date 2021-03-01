@@ -6,7 +6,7 @@ import isEmpty from '../utils'
 const RestaurantList = ({ query, latitude, longitude }) => {
   const data = useFetch('/search?q=' + query + '&lat=' + latitude + '&lon=' + longitude)
   const x = useFetch(null, null, true, 'manipal');
-  console.log(x)
+  console.log(data)
   return (
     <div>
       { isEmpty(data) ? 'Loading...' : data.results_found }

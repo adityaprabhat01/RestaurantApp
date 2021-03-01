@@ -1,34 +1,27 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-import { baseUrl, options } from '../api/index'
+import useFetch from '../api/useFetch'
+import DisplaySearchBar from './dSearchBar'
 
-const SearchBar = ({ locationName }) => {
-  const [location, setLocation] = useState('')
-  useEffect(() => {
-    function getLocation() {
-      const url = baseUrl + '/locations?query=' + locationName
-      fetch(url, options)
-        .then(res => res.json())
-        .then(data => {
-          const { location_suggestions } = data
-          let x = {
-            city_id: location_suggestions[0].city_id,
-            city_name: location_suggestions[0].city_name
-          }
-          setLocation(x)
-        })
-      }
-      //getLocation()
-    }, [] // dependency array showing warning
-  )
-
-  //console.log(location)
-
+const SearchBar = ({ RestaurantName }) => {
+  const data = useFetch('/locations?query=', RestaurantName)
+  const { location_suggestions } = data
+  console.log(location_suggestions)
   return (
     <div>
-      SearchBar
+      <DisplaySearchBar />
     </div>
   )
 }
 
 export default SearchBar
+
+/*
+  entity_id
+  entity_type
+  query -> restaurant name
+*/
+
+/*
+    context api -> entity_id and entity_type from LocationBar
+*/

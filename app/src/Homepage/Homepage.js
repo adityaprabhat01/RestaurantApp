@@ -1,14 +1,14 @@
 import React from 'react'
 
-import Collections from './Collections'
-import RestaurantList from './RestaurantList'
+import SearchBar from '../Search/SearchBar'
+import LocationBar from '../Search/LocationBar'
 
 const Homepage = () => {
   return (
     <div>
       Homepage
-      <Collections city_id='11299' />
-      <RestaurantList query='manipal' lat='13.3490' lon='74.7856' />
+      <LocationBar LocationName='manipal' />
+      <SearchBar RestaurantName='laughing buddha' />
     </div>
   )  
 }
