@@ -3,10 +3,9 @@ import React from 'react'
 import useFetch from '../api/useFetch'
 import DisplaySearchBar from './dSearchBar'
 
-const SearchBar = ({ RestaurantName }) => {
-  const data = useFetch('/locations?query=', RestaurantName)
-  const { location_suggestions } = data
-  console.log(location_suggestions)
+const SearchBar = ({ lat, lon, RestaurantName }) => {
+  const data = useFetch('/search?entity_type=&q=' + RestaurantName + '&lat=' + lat + '&lon=' + lon)
+  console.log(data)
   return (
     <div>
       <DisplaySearchBar />

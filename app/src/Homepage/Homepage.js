@@ -8,7 +8,7 @@ const Homepage = () => {
     <div>
       Homepage
       <LocationBar LocationName='manipal' />
-      <SearchBar RestaurantName='laughing buddha' />
+      <SearchBar lat='13.3490' lon='74.7856' RestaurantName='saiba' />
     </div>
   )  
 }
