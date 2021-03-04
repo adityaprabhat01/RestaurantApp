@@ -1,14 +1,14 @@
 import React from 'react'
 
 import TabList from './TabList'
-import SearchBar from '../Search/SearchBar'
-import LocationBar from '../Search/LocationBar'
+import DisplayLocationBar from '../Search/dLocationBar'
+import DisplaySearchBar from '../Search/dSearchBar'
+import Search from '../Search/Search'
 
 const Restaurant = () => {
   return (
     <div>
-      <LocationBar RestaurantName='' />    
-      <SearchBar LocationName='manipal' />
+      <Search />
       <TabList />
     </div>
     

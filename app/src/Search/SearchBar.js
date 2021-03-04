@@ -1,16 +1,9 @@
-import React from 'react'
-
 import useFetch from '../api/useFetch'
-import DisplaySearchBar from './dSearchBar'
 
 const SearchBar = ({ lat, lon, RestaurantName }) => {
   const data = useFetch('/search?entity_type=&q=' + RestaurantName + '&lat=' + lat + '&lon=' + lon)
   console.log(data)
-  return (
-    <div>
-      <DisplaySearchBar />
-    </div>
-  )
+  return null
 }
 
 export default SearchBar
@@ -23,4 +16,8 @@ export default SearchBar
 
 /*
     context api -> entity_id and entity_type from LocationBar
+*/
+
+/**
+ * Send lat, lon, city_id to Search component
 */

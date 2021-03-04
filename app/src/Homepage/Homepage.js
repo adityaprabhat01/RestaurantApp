@@ -1,16 +1,18 @@
 import React from 'react'
 
-import SearchBar from '../Search/SearchBar'
-import LocationBar from '../Search/LocationBar'
+import Search from '../Search/Search'
 
 const Homepage = () => {
   return (
     <div>
       Homepage
-      <LocationBar LocationName='manipal' />
-      <SearchBar lat='13.3490' lon='74.7856' RestaurantName='saiba' />
+      <Search />
     </div>
   )  
 }
 
 export default Homepage
+
+/*
+  Function that submits the search and passes the prop to the search Bar & location separate.
+*/

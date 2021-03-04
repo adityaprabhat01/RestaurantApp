@@ -11,7 +11,8 @@ const Overview = ({ res_id }) => {
     establishment, 
     has_online_delivery, 
     highlights, is_delivering_now, 
-    location, name, 
+    location, 
+    name, 
     phone_numbers, 
     timings, 
     user_rating 

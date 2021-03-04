@@ -4,8 +4,9 @@ import useFetch from '../api/useFetch'
 import isEmpty from '../utils'
 import Cards from '../Cards/Cards'
 
-const RestaurantList = ({ query, latitude, longitude }) => {
-  const data = useFetch('/search?q=' + query + '&lat=' + latitude + '&lon=' + longitude)
+const RestaurantList = ({ query, lat, lon }) => {
+  console.log(query, lat, lon)
+  const data = useFetch('/search?entity_type=city&q=' + query + '&lat=' + lat + '&lon=' + lon)
   console.log(data)
   return (
     <div>
@@ -13,7 +14,7 @@ const RestaurantList = ({ query, latitude, longitude }) => {
         return <Cards
         data={ restaurant.restaurant.name }
         key={ restaurant.restaurant.R.res_id }
-        />}) }
+      />}) }
     </div>
   )
 }
