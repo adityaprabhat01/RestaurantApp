@@ -11,7 +11,6 @@ function useFetch(param, id, isGeocode = false, query = null){
   }
   const [data, setData] = useState({})
   const [status, setStatus] = useState(false)
-  console.log(url)
   useEffect(() => {
     async function fetchZomato() {
       const response = await fetch(url, options)

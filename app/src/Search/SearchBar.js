@@ -1,9 +1,17 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+import isEmpty from '../utils'
 import useFetch from '../api/useFetch'
 
-const SearchBar = ({ lat, lon, RestaurantName }) => {
-  const data = useFetch('/search?entity_type=&q=' + RestaurantName + '&lat=' + lat + '&lon=' + lon)
+const SearchBar = ({ lat, lon, restaurantName }) => {
+  const data = useFetch('/search?entity_type=&q=' + restaurantName + '&lat=' + lat + '&lon=' + lon)
   console.log(data)
-  return null
+  return (
+    <div>
+      { isEmpty(data) ? 'Loading...' : <Link to={{ pathname: "/restaurant" }}> {data.restaurants[0].restaurant.name} </Link> }
+    </div>
+  )
 }
 
 export default SearchBar

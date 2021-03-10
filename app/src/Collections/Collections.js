@@ -5,8 +5,7 @@ import CollectionList from './CollectionList'
 const Collections = () => {
   return (
     <div>
-    Hi
-      <CollectionList city_id='11299' />
+      <CollectionList />
     </div>
   )
 }

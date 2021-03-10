@@ -1,25 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import isEmpty from '../utils'
 import useFetch from '../api/useFetch'
-import CollectionDetail from './CollectionDetail'
-import Cards from '../Cards/Cards'
+import CardLink from '../Cards/CardLink'
+import { SearchContext } from '../Contexts/SearchContext'
 
-const CollectionList = ({ city_id }) => {
-  console.log("hello")
-  console.log(city_id)
-  const data = useFetch('/collections?city_id=', city_id)
+const CollectionList = () => {
+  const { coordinates } = useContext(SearchContext)
+  const { city_id } = coordinates
+  const data = useFetch('/collections?city_id=' + city_id)
   const { collections } = data
-
-  console.log(collections)
 
   return (
     <div>
-      <CollectionDetail query='manipal' lat='13.3490' lon='74.7856' collection_id='1' />
-      { 
+      {
         isEmpty(data) ? 'Loading...' : collections.map(collection => {
-        return <Cards 
-        data={collection.collection.title} 
+        return <CardLink
+        data={collection.collection.title}
+        id={collection.collection.collection_id}
         key={collection.collection.collection_id} />}) 
       }
     </div>

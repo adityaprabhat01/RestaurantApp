@@ -1,12 +1,13 @@
 import React from 'react'
 
-import Search from '../Search/Search'
+import Collections from '../Collections/Collections'
 
 const Homepage = () => {
   return (
     <div>
       Homepage
-      <Search />
+      Collections
+      <Collections />
     </div>
   )  
 }

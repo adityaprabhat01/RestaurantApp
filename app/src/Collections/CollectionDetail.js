@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useParams } from 'react-router-dom'
 
 import useFetch from '../api/useFetch'
 import isEmpty from '../utils'
 import Cards from '../Cards/Cards'
+import { SearchContext } from '../Contexts/SearchContext'
 
-const CollectionDetail = ({ query, lat, lon, collection_id }) => {
-  const data = useFetch('/search?q=' + query + '&lat=' + lat + '&lon=' + lon + '&collection_id=' + collection_id)
+const CollectionDetail = () => {  
+  let { id } = useParams()
+  const { coordinates } = useContext(SearchContext)
+  const { lat, lon, locationName } = coordinates
+  console.log(locationName, lat, lon, id)
+  const data = useFetch('/search?q=' + locationName + '&lat=' + lat + '&lon=' + lon + '&collection_id=' + id)
   const { restaurants } = data
-  console.log(data)
   return (
     <div>
-      { isEmpty(data) ? 'Loading...' : restaurants.map(restaurant => {
+      { 
+        isEmpty(data) ? 'Loading...' : restaurants.map(restaurant => {
         return <Cards 
-          data={restaurant.restaurant.name}
+          data={restaurant.restaurant.name}          
           key={restaurant.restaurant.R.res_id}
         />}) 
       }
