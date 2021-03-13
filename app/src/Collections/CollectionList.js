@@ -16,7 +16,7 @@ const CollectionList = () => {
       {
         isEmpty(data) ? 'Loading...' : collections.map(collection => {
         return <CardLink
-        data={collection.collection.title}
+        res_name={collection.collection.title}
         id={collection.collection.collection_id}
         key={collection.collection.collection_id} />}) 
       }

@@ -1,10 +1,10 @@
 import React from 'react'
 
+import CardOrder from '../Cards/CardOrder'
+
 const Order = () => {
   return (
-    <div>
-      <b>Order Here</b>
-    </div>
+    <CardOrder data={'order-online'} />
   )
 }
 

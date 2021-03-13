@@ -1,13 +1,15 @@
 import React from 'react'
 
 import Collections from '../Collections/Collections'
+import Order from '../Order/Order'
 
-const Homepage = () => {
+const Homepage = () => {  
   return (
     <div>
       Homepage
       Collections
       <Collections />
+      <Order />
     </div>
   )  
 }

@@ -1,21 +1,23 @@
 import React from 'react'
 
 import useFetch from '../../api/useFetch'
-import Cards from '../../Cards/Cards'
+import ReviewCard from '../../Cards/ReviewCard'
 import isEmpty from '../../utils'
 
 const Review = ({ res_id }) => {
-  const data = useFetch('/reviews?res_id=', res_id)
+  const data = useFetch('/reviews?res_id=' + res_id)
   const { user_reviews } = data
   console.log(user_reviews)
   return (
     <div>
+      <b>Review</b>
       { isEmpty(data) ? 'Loading...' : user_reviews.map(user_review => {
-        return <Cards 
-        data={ 
-          user_review.review.rating_text,
-          user_review.review.rating, 
-          user_review.review.user.name }
+        return <ReviewCard
+        data={{
+          username: user_review.review.user.name,
+          rating: user_review.review.rating,
+          rating_text: user_review.review.rating_text,
+        }}
         key={ user_review.review.id }
       />}) }
     </div>

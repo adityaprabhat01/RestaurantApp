@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CardLink = ({ data, id }) => {
+const CardLink = ({ res_name, id }) => {
   return (
     <div>
-      <Link to={{ pathname: "/details/" + id }}>{ data }</Link>
+      <Link to={{ pathname: "/details/" + id }}>{ res_name }</Link>
     </div>
   )
 }

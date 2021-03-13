@@ -1,15 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useEffect, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 
 import isEmpty from '../utils'
 import useFetch from '../api/useFetch'
+import { RestaurantContext } from '../Contexts/RestaurantContext'
 
 const SearchBar = ({ lat, lon, restaurantName }) => {
+  const { restaurant_search } = useContext(RestaurantContext)
+  const [redirect, setRedirect] = useState(false)
   const data = useFetch('/search?entity_type=&q=' + restaurantName + '&lat=' + lat + '&lon=' + lon)
-  console.log(data)
+  useEffect(() => {
+    if(!isEmpty(data)){
+      const res_id = data.restaurants[0].restaurant.R.res_id
+      const res_name = data.restaurants[0].restaurant.name
+      const res_details = data.restaurants[0]
+      restaurant_search(res_id, res_name, res_details)
+      setRedirect(true)
+    }
+  },[data])
   return (
     <div>
-      { isEmpty(data) ? 'Loading...' : <Link to={{ pathname: "/restaurant" }}> {data.restaurants[0].restaurant.name} </Link> }
+      { redirect === false ? 'Loading...' : <Redirect to={"/restaurant/" + data.restaurants[0].restaurant.name} /> }
     </div>
   )
 }

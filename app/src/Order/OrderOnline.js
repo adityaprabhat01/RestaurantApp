@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import RestaurantList from './RestaurantList'
+import { SearchContext } from '../Contexts/SearchContext'
 
 const OrderOnline = () => {
+  const { coordinates } = useContext(SearchContext)
+  const { lat, lon, locationName } = coordinates
   return (
     <div>
-      <RestaurantList query='manipal' lat='13.3490' lon='74.7856' />
+      OrderOnline
+      <RestaurantList query={locationName} lat={lat} lon={lon} />
     </div>
   )
 }
