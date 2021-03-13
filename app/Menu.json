@@ -1,0 +1,279 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Consomme printaniere royal",
+      "price": 157
+    },
+    {
+      "id": 2,
+      "name": "Chicken gumbo",
+      "price": 149
+    },
+    {
+      "id": 3,
+      "name": "Tomato aux croutons",
+      "price": 147
+    },
+    {
+      "id": 4,
+      "name": "Onion au gratin",
+      "price": 169
+    },
+    {
+      "id": 5,
+      "name": "St. Emilion",
+      "price": 104
+    },
+    {
+      "id": 6,
+      "name": "Rockaways",
+      "price": 167
+    },
+    {
+      "id": 7,
+      "name": "Radishes",
+      "price": 147
+    },
+    {
+      "id": 8,
+      "name": "Chicken soup with rice",
+      "price": 159
+    },
+    {
+      "id": 9,
+      "name": "Clam broth (cup)",
+      "price": 183
+    },
+    {
+      "id": 10,
+      "name": "Cream of new asparagus, croutons",
+      "price": 172
+    },
+    {
+      "id": 11,
+      "name": "Clear green turtle",
+      "price": 196
+    },
+    {
+      "id": 12,
+      "name": "Striped bass saute, meuniere",
+      "price": 110
+    },
+    {
+      "id": 13,
+      "name": "Anchovies",
+      "price": 199
+    },
+    {
+      "id": 14,
+      "name": "Fresh lobsters in every style",
+      "price": 133
+    },
+    {
+      "id": 15,
+      "name": "Celery",
+      "price": 114
+    },
+    {
+      "id": 16,
+      "name": "Pim-olas",
+      "price": 138
+    },
+    {
+      "id": 17,
+      "name": "Caviar",
+      "price": 170
+    },
+    {
+      "id": 18,
+      "name": "Sardines",
+      "price": 195
+    },
+    {
+      "id": 19,
+      "name": "India chutney",
+      "price": 130
+    },
+    {
+      "id": 20,
+      "name": "Pickles",
+      "price": 134
+    },
+    {
+      "id": 21,
+      "name": "English walnuts",
+      "price": 138
+    },
+    {
+      "id": 22,
+      "name": "Pate de foies-gras",
+      "price": 174
+    },
+    {
+      "id": 23,
+      "name": "Pomard",
+      "price": 181
+    },
+    {
+      "id": 24,
+      "name": "Brook trout, mountain style",
+      "price": 141
+    },
+    {
+      "id": 25,
+      "name": "Whitebait, sauce tartare",
+      "price": 165
+    },
+    {
+      "id": 26,
+      "name": "Clams",
+      "price": 106
+    },
+    {
+      "id": 27,
+      "name": "Oysters",
+      "price": 174
+    },
+    {
+      "id": 28,
+      "name": "Claremont planked shad",
+      "price": 174
+    },
+    {
+      "id": 29,
+      "name": "G. H. Mumm & Co's Extra Dry",
+      "price": 176
+    },
+    {
+      "id": 30,
+      "name": "Cerealine with Milk",
+      "price": 155
+    },
+    {
+      "id": 31,
+      "name": "Sliced Bananas",
+      "price": 189
+    },
+    {
+      "id": 32,
+      "name": "Wheat Vitos",
+      "price": 119
+    },
+    {
+      "id": 33,
+      "name": "Sliced Tomatoes",
+      "price": 130
+    },
+    {
+      "id": 34,
+      "name": "Russian Caviare on Toast",
+      "price": 131
+    },
+    {
+      "id": 35,
+      "name": "Smoked beef in cream",
+      "price": 100
+    },
+    {
+      "id": 36,
+      "name": "Huhnerbruhe",
+      "price": 127
+    },
+    {
+      "id": 37,
+      "name": "ROAST EASTER LAMB, MINT SAUCE",
+      "price": 155
+    },
+    {
+      "id": 38,
+      "name": "Apple Sauce",
+      "price": 175
+    },
+    {
+      "id": 39,
+      "name": "Potage a la Victoria",
+      "price": 200
+    },
+    {
+      "id": 40,
+      "name": "Breakfast",
+      "price": 198
+    },
+    {
+      "id": 41,
+      "name": "Strawberries",
+      "price": 114
+    },
+    {
+      "id": 42,
+      "name": "Preserved figs",
+      "price": 167
+    },
+    {
+      "id": 43,
+      "name": "BLUE POINTS",
+      "price": 179
+    },
+    {
+      "id": 44,
+      "name": "CONSOMME ANGLAISE",
+      "price": 117
+    },
+    {
+      "id": 45,
+      "name": "CREAM OF CAULIFLOWER",
+      "price": 171
+    },
+    {
+      "id": 46,
+      "name": "BROILED SHAD, A LA MAITRE D'HOTEL",
+      "price": 164
+    },
+    {
+      "id": 47,
+      "name": "SLICED CUCUMBERS",
+      "price": 132
+    },
+    {
+      "id": 48,
+      "name": "SALTED ALMONDS",
+      "price": 157
+    },
+    {
+      "id": 49,
+      "name": "POTATOES, JULIEN",
+      "price": 162
+    },
+    {
+      "id": 50,
+      "name": "Cracked Wheat",
+      "price": 160
+    },
+    {
+      "id": 51,
+      "name": "Malt Breakfast Food",
+      "price": 137
+    },
+    {
+      "id": 52,
+      "name": "BOILED BEEF TONGUE, ITALIAN SAUCE",
+      "price": 174
+    },
+    {
+      "id": 53,
+      "name": "Young Onions",
+      "price": 159
+    },
+    {
+      "id": 54,
+      "name": "Pears",
+      "price": 142
+    },
+    {
+      "id": 55,
+      "name": "ROAST SIRLOIN OF BEEF, YORKSHIRE PUDDING",
+      "price": 122
+    }
+  ]
+}
