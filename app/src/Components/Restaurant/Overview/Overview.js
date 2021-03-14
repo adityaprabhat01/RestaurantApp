@@ -1,7 +1,7 @@
 import React from 'react'
 
-import useFetch from '../../api/useFetch'
-import isEmpty from '../../utils'
+import useFetch from '../../../api/useFetch'
+import isEmpty from '../../../utils'
 
 const Overview = ({ res_id }) => {
   const data = useFetch('/restaurant?res_id=' + res_id)

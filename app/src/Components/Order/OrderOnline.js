@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import RestaurantList from './RestaurantList'
-import { SearchContext } from '../Contexts/SearchContext'
+import { SearchContext } from '../../Contexts/SearchContext'
 
 const OrderOnline = () => {
   const { coordinates } = useContext(SearchContext)

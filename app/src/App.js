@@ -1,14 +1,16 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
-import Homepage from './Homepage/Homepage'
-import Restaurant from './Restaurant/Restaurant'
-import CollectionDetail from './Collections/CollectionDetail'
-import OrderOnline from './Order/OrderOnline'
-import Search from './Search/Search'
+import Homepage from './Components/Homepage/Homepage'
+import Restaurant from './Components/Restaurant/Restaurant'
+import CollectionDetail from './Components/Collections/CollectionDetail'
+import OrderOnline from './Components/Order/OrderOnline'
+import Search from './Components/Search/Search'
+import Cart from './Components/Restaurant/Cart/Cart'
 
 import SearchContextProvider from './Contexts/SearchContext'
 import RestaurantContextProvider from './Contexts/RestaurantContext'
+import CartContextProvider from './Contexts/CartContext'
 
 const App = () => {
   return(
@@ -17,9 +19,14 @@ const App = () => {
         <SearchContextProvider>
           <RestaurantContextProvider>
             <Search />
-            <Route exact path="/restaurant/:res_name" component={ Restaurant } />
+              <CartContextProvider>
+                <Route exact path="/restaurant/:res_name" component={ Restaurant } />
+                <Route exact path="/cart" component= { Cart } />
+              </CartContextProvider>
           </RestaurantContextProvider>
-          <Route exact path="/" component={ Homepage } />
+          <CartContextProvider>
+            <Route exact path="/" component={ Homepage } />
+          </CartContextProvider>
           <Route exact path='/details/:id' component={ CollectionDetail } />
           <Route exact path="/order-online" component={ OrderOnline } />
         </SearchContextProvider>                  

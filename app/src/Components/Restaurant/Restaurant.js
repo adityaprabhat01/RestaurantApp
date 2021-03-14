@@ -2,10 +2,10 @@ import React, { useContext, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import TabList from './TabList'
-import useFetch from '../api/useFetch'
-import isEmpty from '../utils'
-import { RestaurantContext } from '../Contexts/RestaurantContext'
-import { SearchContext } from '../Contexts/SearchContext'
+import useFetch from '../../api/useFetch'
+import isEmpty from '../../utils'
+import { RestaurantContext } from '../../Contexts/RestaurantContext'
+import { SearchContext } from '../../Contexts/SearchContext'
 import DRestaurant from './DRestaurant'
 
 const Restaurant = () => {

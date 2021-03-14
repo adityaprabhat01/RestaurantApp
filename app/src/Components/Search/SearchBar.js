@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Redirect } from 'react-router-dom'
 
-import isEmpty from '../utils'
-import useFetch from '../api/useFetch'
-import { RestaurantContext } from '../Contexts/RestaurantContext'
+import isEmpty from '../../utils'
+import useFetch from '../../api/useFetch'
+import { RestaurantContext } from '../../Contexts/RestaurantContext'
 
 const SearchBar = ({ lat, lon, restaurantName }) => {
   const { restaurant_search } = useContext(RestaurantContext)

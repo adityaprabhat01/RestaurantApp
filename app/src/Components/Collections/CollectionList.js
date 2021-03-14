@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 
-import isEmpty from '../utils'
-import useFetch from '../api/useFetch'
+import isEmpty from '../../utils'
+import useFetch from '../../api/useFetch'
 import CardLink from '../Cards/CardLink'
-import { SearchContext } from '../Contexts/SearchContext'
+import { SearchContext } from '../../Contexts/SearchContext'
 
 const CollectionList = () => {
   const { coordinates } = useContext(SearchContext)

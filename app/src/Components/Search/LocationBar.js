@@ -1,9 +1,8 @@
 import { useContext, useEffect } from 'react'
 
-import isEmpty from '../utils'
-import isEmptyArray from '../utils'
-import useFetch from '../api/useFetch'
-import { SearchContext } from '../Contexts/SearchContext'
+import isEmpty from '../../utils'
+import useFetch from '../../api/useFetch'
+import { SearchContext } from '../../Contexts/SearchContext'
 
 const LocationBar = ({ locationName }) => {
   const data = useFetch('/cities?q=' + locationName)

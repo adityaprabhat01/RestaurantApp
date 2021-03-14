@@ -1,8 +1,8 @@
 import React from 'react'
 
-import useFetch from '../../api/useFetch'
+import useFetch from '../../../api/useFetch'
 import ReviewCard from '../../Cards/ReviewCard'
-import isEmpty from '../../utils'
+import isEmpty from '../../../utils'
 
 const Review = ({ res_id }) => {
   const data = useFetch('/reviews?res_id=' + res_id)

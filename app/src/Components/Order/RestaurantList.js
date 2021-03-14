@@ -1,7 +1,7 @@
 import React from 'react'
 
-import useFetch from '../api/useFetch'
-import isEmpty from '../utils'
+import useFetch from '../../api/useFetch'
+import isEmpty from '../../utils'
 import Cards from '../Cards/Cards'
 import RestaurantCard from '../Cards/RestaurantCard'
 

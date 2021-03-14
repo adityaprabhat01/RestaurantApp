@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
 
-import useFetch from '../api/useFetch'
-import isEmpty from '../utils'
+import useFetch from '../../api/useFetch'
+import isEmpty from '../../utils'
 import Cards from '../Cards/Cards'
-import { SearchContext } from '../Contexts/SearchContext'
+import { SearchContext } from '../../Contexts/SearchContext'
 import RestaurantCard from '../Cards/RestaurantCard'
 
 const CollectionDetail = () => {  

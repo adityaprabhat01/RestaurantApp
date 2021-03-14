@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 
 import SearchBar from './SearchBar'
-import { SearchContext } from '../Contexts/SearchContext'
+import { SearchContext } from '../../Contexts/SearchContext'
 
 const DisplaySearchBar = () => {
   const [value, setValue] = useState({ render: false, restaurantName: '' })
