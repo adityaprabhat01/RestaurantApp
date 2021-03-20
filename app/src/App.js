@@ -18,8 +18,8 @@ const App = () => {
       <BrowserRouter>
         <SearchContextProvider>
           <RestaurantContextProvider>
-            <Search />
               <CartContextProvider>
+                <Search />
                 <Route exact path="/restaurant/:res_name" component={ Restaurant } />
                 <Route exact path="/cart" component= { Cart } />
               </CartContextProvider>

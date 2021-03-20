@@ -2,9 +2,11 @@ import React, { createContext, useState } from 'react'
 
 export const CartContext = createContext()
 
-const CartContextProvider = (props) => {
+function CartContextProvider(props){
   const [cart, setCart] = useState([])
+  const [inCart, setInCart] = useState([])
   const [total, setTotal] = useState(0)
+
   const add_to_cart = (id, name, price) => {
     const item = {
       id,
@@ -13,17 +15,37 @@ const CartContextProvider = (props) => {
     }
     setCart([...cart, item])
     setTotal(total + item.price)
+    update_cart(id)
   }
-  const remove_from_cart = (id, price) => {
+
+  function remove_from_cart(id, price){
     let filterdState = cart.filter(item => {
       return id != item.id
     })
     setCart(filterdState)
-    console.log(filterdState)
     setTotal(total - price)
+
+    var array = inCart
+    const index = array.indexOf(id)
+    if(index != -1){
+      array.splice(index, 1)
+      setInCart(array)
+    }
   }
+
+  async function flush_cart(){
+    setCart([])
+    setInCart([])
+    setTotal(0)
+    console.log("flush cart", inCart)
+  }
+
+  function update_cart(id){
+    setInCart([...inCart, id])
+  }
+
   return (
-    <CartContext.Provider value={{ cart, total, add_to_cart, remove_from_cart }}>
+    <CartContext.Provider value={{ cart, inCart, total, add_to_cart, remove_from_cart, flush_cart, update_cart }}>
       { props.children }
     </CartContext.Provider>
   )

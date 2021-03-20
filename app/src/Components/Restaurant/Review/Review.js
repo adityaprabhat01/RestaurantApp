@@ -7,7 +7,6 @@ import isEmpty from '../../../utils'
 const Review = ({ res_id }) => {
   const data = useFetch('/reviews?res_id=' + res_id)
   const { user_reviews } = data
-  console.log(user_reviews)
   return (
     <div>
       <b>Review</b>

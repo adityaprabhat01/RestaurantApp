@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 
-const useFetchMenu = () => {
+const useFetchMenu = (res_id) => {
   const url = 'http://localhost:8000/menu'
-  const [data, setData] = useState({})
+  const [data, setData] = useState({})  
   useEffect(() => {
+    console.log("Fetch menu")
     async function fetchMenu() {
       const response = await fetch(url)
       const data = await response.json()
       setData(data)
     }
     fetchMenu()
-    }, [url]
+    }, [res_id]
   )
   return data
 }
