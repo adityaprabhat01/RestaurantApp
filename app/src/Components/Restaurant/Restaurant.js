@@ -42,8 +42,24 @@ const Restaurant = () => {
 
   return (
     <div>
-      { render === false ? 'Loading...' : <DRestaurant /> }
-      { renderTab == false ? 'Loading...' : <TabList /> }
+      { 
+        render === false ?
+        <div class="ui segment">
+          <div class="ui active dimmer">
+            <div class="ui massive text loader">Loading</div>
+          </div>
+        </div> : 
+        <DRestaurant /> 
+      }
+      { 
+        renderTab == false ? 
+        <div class="ui segment">
+          <div class="ui active dimmer">
+            <div class="ui massive text loader">Loading</div>
+          </div>
+        </div> : 
+        <TabList /> 
+      }
     </div>
   )
 }
