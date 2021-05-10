@@ -4,7 +4,7 @@ import DisplaySearchBar from './dSearchBar'
 
 const Search = () => {
   return (
-    <div>
+    <div style={{ display: "flex", justifyContent:"center", width: "100%", position: "absolute", marginTop: "20px" }}>
       <DisplayLocationBar />
       <DisplaySearchBar />
     </div>

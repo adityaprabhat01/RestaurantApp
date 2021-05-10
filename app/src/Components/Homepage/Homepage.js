@@ -1,13 +1,15 @@
 import React from 'react'
 
+import HomeHeader from '../Image/HomeHeader'
+import HeaderText from '../Image/HeaderText'
 import Collections from '../Collections/Collections'
 import Order from '../Order/Order'
 
 const Homepage = () => {  
   return (
-    <div>
-      Homepage
-      Collections
+    <div style={{ zIndex: "-1" }}>
+      <HomeHeader />
+      <HeaderText />
       <Collections />
       <Order />
     </div>
@@ -15,7 +17,3 @@ const Homepage = () => {
 }
 
 export default Homepage
-
-/*
-  Function that submits the search and passes the prop to the search Bar & location separate.
-*/

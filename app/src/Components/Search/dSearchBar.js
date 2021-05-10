@@ -12,10 +12,10 @@ const DisplaySearchBar = () => {
     setValue({ render: true, restaurantName: event.target[0].value })
   }
   return (
-    <div>      
-      <form onSubmit={ onSubmit }>
-        <input type="text" id="searchBar" name="search" style={{height: "20px", width: "20px"}}></input>
-        <input type="submit" value="Submit"></input>
+    <div style={{ width: "40%" }}>      
+      <form onSubmit={ onSubmit } style={{ display: "flex", flexDirection: "column" }}>
+        <input type="text" id="searchBar" name="search" style={{height: "60px", width: "auto", borderRadius: "0.8rem"}}></input>
+        <input type="submit" value="Submit" style={{width: "auto"}}></input>
       </form>
       { value.render == false ? null : <SearchBar lat={lat} lon={lon} restaurantName={value.restaurantName} /> }
     </div>
