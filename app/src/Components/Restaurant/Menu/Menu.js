@@ -4,7 +4,7 @@ import MenuList from './MenuList'
 const Menu = () => {
   return (
     <div style={{ marginLeft: "20%" }}>
-      Menu
+      <b>Order</b>
       <MenuList />
     </div>
   )

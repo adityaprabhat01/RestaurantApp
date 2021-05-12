@@ -16,7 +16,6 @@ const MenuList = () => {
 
   return (
     <div>
-      MenuList
       { 
         isEmpty(data) ? 'Loading...' : 
          data.map(item => 

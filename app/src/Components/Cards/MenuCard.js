@@ -1,4 +1,5 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
+import './cards.css'
 
 const MenuCard = ({ id, name, price, add_to_cart, status }) => {
   const [added, setAdded] = useState(status)
@@ -30,6 +31,7 @@ const MenuCard = ({ id, name, price, add_to_cart, status }) => {
           </div>
         </div>
       </div>
+      <hr class="hr-menu" />
     </div>
   )
 }
